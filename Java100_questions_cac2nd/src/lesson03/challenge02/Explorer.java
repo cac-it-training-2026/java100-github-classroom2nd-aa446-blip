@@ -62,7 +62,11 @@ public class Explorer {
 		int inputCans = 0;
 
 
-		//ここにfor文を利用した処理を記述
+		for (int i = 0; i < 3; i++) {
+			System.out.println("\n隊長":);
+			
+			
+		}
 
 
 		if (inputCans >= targetCans) {
