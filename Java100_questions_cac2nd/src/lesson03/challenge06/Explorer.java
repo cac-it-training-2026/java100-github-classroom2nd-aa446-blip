@@ -89,7 +89,7 @@ public class Explorer {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		for (int i = 1; i <= 3; i++) {
+		for (int i = 1; i < 3; i++) {
 			System.out.println("\n隊長：");
 			System.out.println(i + "時間経過。");
 
