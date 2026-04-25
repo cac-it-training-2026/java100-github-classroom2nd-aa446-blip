@@ -38,7 +38,7 @@ class Samurai {
 
 //ここに問題1で作成したRetainerを改変して記述
 class Retainer extends Samurai {
-	public void getPaid() {
+	void getPaid() {
 		System.out.println("給料をもらうよ～。");
 
 	}
