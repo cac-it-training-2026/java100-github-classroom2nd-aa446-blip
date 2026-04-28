@@ -20,7 +20,7 @@ package lesson07.challenge12;
 
 //ここにIChiefTreasurerインターフェースを記述
 interface IChiefTreasurer {
-	void figure();
+	public void figure();
 }
 
 //ここにSamuraiクラスを記述
