@@ -73,17 +73,6 @@ class Retainer extends Samurai implements IChiefRetainer {
 		return "拙者は" + domain + "藩士、" + name + "ともうす。";
 	}
 
-	public boolean equals(Object object) {
-		boolean isMatch;
-		Retainer retainer = (Retainer) object;
-		if (this.domain.equals(retainer.domain)) {
-			isMatch = true;
-		} else {
-			isMatch = false;
-		}
-		return isMatch;
-	}
-
 	public void figure() {
 		System.out.println("藩の資産を計算するよ～。");
 	}
