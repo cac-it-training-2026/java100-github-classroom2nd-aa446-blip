@@ -10,33 +10,80 @@
  *
  * <実行例>
  * 藩士1：
- * 藩の資産を計算するよ～。
+ * 藩の資産を計算するよ～。 
  * 茶道を嗜むよ～。
  *
  */
 
 package lesson07.challenge14;
 
-
 //ここにIChiefTreasurerインターフェースを記述
+interface IChiefTreasurer {
+	void figure();
 
+}
 
 //ここにICelebrityインターフェースを記述
-
+interface ICelebrity {
+	void learn();
+}
 
 //ここにSamuraiクラスを記述
+abstract class Samurai {
+	abstract void work();
 
+	protected String name;
+
+	void fight() {
+		System.out.println("戦うよ～。");
+	}
+
+}
 
 //ここにRetainerクラスを記述
+class Retainer extends Samurai implements IChiefTreasurer, ICelebrity {
 
+	protected String domain;
 
-public class CastleTown {
+	public Retainer() {
 
-    public static void main(String[] args) {
-        System.out.println("藩士1：");
+	}
 
+	public Retainer(String name, String domain) {
+		this.name = name;
+		this.domain = domain;
+	}
 
-        //ここに適切な処理を記述;
+	void getPaid() {
+		System.out.println("給料をもらうよ～。");
+	}
 
-    }
+	void work() {
+		System.out.println("年貢を取り立てるよ～。");
+	}
+
+	public String toString() {
+		return "拙者は" + domain + "藩士、" + name + "ともうす。";
+	}
+
+	public void figure() {
+		System.out.println("藩の資産を計算するよ～。");
+	}
+
+	public void learn() {
+		System.out.println("茶道を嗜むよ～。");
+	}
+
+	public class CastleTown {
+
+		public static void main(String[] args) {
+			System.out.println("藩士1：");
+
+			//ここに適切な処理を記述;
+			Retainer retainer = new Retainer();
+			retainer.figure();
+			retainer.learn();
+
+		}
+	}
 }
